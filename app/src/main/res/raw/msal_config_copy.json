@@ -1,0 +1,19 @@
+{
+  "client_id" : "<Enter your Application (client id)>",
+  "authorization_user_agent" : "DEFAULT",
+  "redirect_uri" : "<Copy the redirect Uri from your app registration in the Azure Portal>",
+  "broker_redirect_uri_registered" : true,
+  "authorities" : [
+    {
+      "type": "AAD",
+      "audience": {
+        "type": "AzureADMyOrg",
+        "tenant_id": "<Post your sign-in audience here (for example: common). If it is a single-tenant app, paste the tenant id>"
+      }
+    }
+  ],
+  "logging" : {
+    "log_level" : "VERBOSE",
+    "logcat_enabled" : true
+  }
+}
