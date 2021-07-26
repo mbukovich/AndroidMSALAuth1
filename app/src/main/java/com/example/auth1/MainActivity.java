@@ -23,6 +23,13 @@ public class MainActivity extends AppCompatActivity {
         viewModel.loginMSAL(this).observe(this, new Observer<String>() {
             @Override
             public void onChanged(String s) {
+                viewModel.getMSGraphUser(s);
+            }
+        });
+
+        viewModel.getUserDisplayName().observe(this, new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
                 mTextView.setText(s);
             }
         });

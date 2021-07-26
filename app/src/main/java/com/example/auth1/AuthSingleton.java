@@ -83,6 +83,13 @@ public class AuthSingleton {
                     .withScopes(Arrays.asList(scopes.clone()))
                     .build();
             IAuthenticationResult result = mClientApp.acquireTokenSilent(parameters);
+            AppExecutors executors = AppExecutors.getInstance();
+            executors.mainThread().execute(new Runnable() {
+                @Override
+                public void run() {
+                    mAccessToken.setValue(result.getAccessToken());
+                }
+            });
         } catch (Exception e) {
             // Interactive call
             try {

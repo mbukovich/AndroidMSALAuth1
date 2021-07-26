@@ -8,7 +8,7 @@
       "type": "AAD",
       "audience": {
         "type": "AzureADMyOrg",
-        "tenant_id": "<Post your sign-in audience here (for example: common). If it is a single-tenant app, paste the tenant id>"
+        "tenant_id": "<Post your tenant specification (for example: common). If it is a single-tenant app, paste the tenant id>"
       }
     }
   ],
